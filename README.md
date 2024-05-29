@@ -7,6 +7,4 @@ https://medium.com/simform-engineering/stripe-integration-with-ruby-on-rails-408
 dashboard  
   Manage your products  
     Product catalog  
-      + Add a product  
-
-
+      + Add a product

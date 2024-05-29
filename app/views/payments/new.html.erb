@@ -1,0 +1,14 @@
+<%= form_tag payments_path do %>
+  <label class="amount">
+      <span>Subscription: <%= @currency %><%= @price.to_f / 100 %></span>
+  </label>
+
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="A month's subscription"
+    data-email="<%= @user.email %>"
+    data-amount="<%= @price %>"
+    data-locale="auto">
+  </script>
+<% end %>
